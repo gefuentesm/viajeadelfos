@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript' src='/javascripts/script.js')
+  body
+    h1=secciones.titulo
+    img(src='http://localhost:3000/images/'+secciones.image, width="100%") 
+    div
+        div.centerPost &nbsp;
+        div.content-post
+          h2=secciones.ult_post.titulo
+          each parrafo, i in secciones.ult_post.texto_completo
+            p(style="font-size:14pt")=parrafo
+        div.incerto 
+          img.img_round(src='http://localhost:3000/images/'+secciones.autor+".png", width="8%") 
+          span=" por "
+          span.autores=secciones.autor        
+          p=secciones.descrip
+          p.separa <b>Lo Último</b>
+
+          ul
+            li Imagenes de la casa tomada
+            li Imagenes de la biblioteca de babel
+        

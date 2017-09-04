@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript' src='/javascripts/script.js')
+  body
+    div.slideshow-container
+      div.mySlides
+        img(src='http://localhost:3000/images/entrada.png',width="100%")
+      div.mySlides
+        img(src='http://localhost:3000/images/fondo-letra.png',width="100%")  
+      div.mySlides
+        img(src='http://localhost:3000/images/grupo.png',width="100%") 
+      a.prev(onclick="plusSlides(-1)")&#10094;
+      a.next(onclick="plusSlides(1)")&#10095;
+      div.center
+        span.dot(onclick="currentSlide(1)")
+        span.dot(onclick="currentSlide(2)")
+        span.dot(onclick="currentSlide(3)")
+    script.
+      var slideIndex = 1;
+      showSlides(slideIndex);
+    block content

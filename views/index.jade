@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div
+    each seccion, i in secciones
+      <script>var corto=substring(secciones.descrip,1,100)+"..."</script>
+      div.ficha
+        div 
+          img(src='http://localhost:3000/images/'+seccion.image,width="100%")
+        div.container
+          h2=seccion.ult_post.titulo
+          img.img_round(src='http://localhost:3000/images/'+seccion.autor+".png", width="8%") 
+          span=" por "
+          span.autores=seccion.autor
+          p(style="font-size:16pt")=seccion.ult_post.texto_corto
+          a(href="/secciones/"+seccion._id) leer más
+    script.
+      var slideIndex = 1;
+      var myVar = setInterval(plusSlides1 ,3000);
+      setTimeout(parar, 11000)
+
+      
